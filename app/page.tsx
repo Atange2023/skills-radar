@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import sourceStatus from "../content/source-status.json";
 import { allTags, experts, items, paths, type SkillItem, updateLog } from "../content/skills";
 
 const priorityRank: Record<SkillItem["priority"], number> = { 先装: 1, 先看: 2, 按需: 3, 参考: 4, 进阶: 5, 高级: 6 };
@@ -102,7 +103,7 @@ export default function Home() {
 
       <section className="section updates shell" id="updates">
         <div className="section-title"><div><p className="section-kicker">MAINTENANCE LOG</p><h2>每日复核，保持内容新鲜</h2></div><p>站点只在来源发生有意义变化时更新，避免为了更新而更新。</p></div>
-        <div className="updates-grid"><div className="update-status"><span className="pulse" /><div><strong>计划复核时间</strong><b>每天 00:05 · Asia/Shanghai</b></div><span className="status-label">等待调度</span></div><div className="update-log">{updateLog.map((log) => <div className="log-row" key={log.date}><time>{log.date}</time><span><strong>{log.label}</strong>{log.text}</span></div>)}</div></div>
+        <div className="updates-grid"><div className="update-status"><span className="pulse" /><div><strong>自动复核已配置</strong><b>每天 00:05 · Asia/Shanghai</b></div><span className="status-label">已启用</span></div><div className="update-log"><div className="log-row"><time>{sourceStatus.sources.length || "首轮"}</time><span><strong>来源检查</strong>{sourceStatus.sources.length ? `已检查 ${sourceStatus.sources.length} 个 GitHub 来源。` : "首轮检查将在下一次定时任务运行。"}</span></div>{updateLog.map((log) => <div className="log-row" key={log.date}><time>{log.date}</time><span><strong>{log.label}</strong>{log.text}</span></div>)}</div></div>
       </section>
 
       <footer className="site-footer"><div className="shell footer-inner"><span>Skills Radar / 中文互联网 Skills 推荐雷达</span><span>内容来源于公开仓库与用户提供的整理稿。安装前请自行检查权限、依赖与 API Key 要求。</span><a href="#top">回到顶部 ↑</a></div></footer>
