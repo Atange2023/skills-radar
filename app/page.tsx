@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import sourceStatus from "../content/source-status.json";
+import { filterItemsByPath } from "../content/filtering";
 import { allTags, experts, items, paths, type SkillItem, updateLog } from "../content/skills";
 
 const priorityRank: Record<SkillItem["priority"], number> = { 先装: 1, 先看: 2, 按需: 3, 参考: 4, 进阶: 5, 高级: 6 };
@@ -12,6 +13,7 @@ function copyText(text: string) {
 
 export default function Home() {
   const [activeExpert, setActiveExpert] = useState("all");
+  const [activePath, setActivePath] = useState("");
   const [activeTag, setActiveTag] = useState("全部");
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState("default");
@@ -19,7 +21,9 @@ export default function Home() {
 
   const filteredItems = useMemo(() => {
     const q = query.trim().toLowerCase();
-    const result = items.filter((item) => {
+    const selectedPathItems = activePath ? paths.find((path) => path.id === activePath)?.items : null;
+    const pathFilteredItems = selectedPathItems ? filterItemsByPath(items, selectedPathItems) : items;
+    const result = pathFilteredItems.filter((item) => {
       const expertOk = activeExpert === "all" || item.expert === activeExpert;
       const tagOk = activeTag === "全部" || item.tags.includes(activeTag);
       const text = [item.name, item.cn, item.type, item.source, item.solves, item.usage, item.best, item.priority, item.freshness, ...item.tags].join(" ").toLowerCase();
@@ -28,19 +32,23 @@ export default function Home() {
     if (sort === "priority") result.sort((a, b) => priorityRank[a.priority] - priorityRank[b.priority]);
     if (sort === "name") result.sort((a, b) => a.name.localeCompare(b.name));
     return result;
-  }, [activeExpert, activeTag, query, sort]);
+  }, [activeExpert, activePath, activeTag, query, sort]);
 
   const selectedExpert = activeExpert === "all" ? null : experts.find((expert) => expert.id === activeExpert);
+  const selectedPath = activePath ? paths.find((path) => path.id === activePath) : null;
   const flash = (message: string) => {
     setToast(message);
     window.setTimeout(() => setToast(""), 1600);
   };
-  const selectScenario = (name: string) => {
+  const selectScenario = (pathId: string) => {
     setActiveExpert("all");
+    setActivePath(pathId);
     setActiveTag("全部");
-    setQuery(name);
+    setQuery("");
     document.getElementById("catalogue")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+  const selectExpert = (expertId: string) => { setActivePath(""); setActiveExpert(expertId); };
+  const selectTag = (tag: string) => { setActivePath(""); setActiveTag(tag); };
 
   return (
     <main>
@@ -75,7 +83,7 @@ export default function Home() {
 
       <section className="section shell" id="scenarios">
         <div className="section-title"><div><p className="section-kicker">START HERE</p><h2>先说你要解决什么</h2></div><p>比起收藏一堆仓库，先把一个真实工作流跑通。</p></div>
-        <div className="scenario-grid">{paths.map((path) => <button className="scenario" key={path.id} onClick={() => selectScenario(path.items[0])}><span className="scenario-number">{path.mark}</span><span className="scenario-title">{path.title}<b>↗</b></span><span className="scenario-desc">{path.desc}</span><span className="scenario-items">{path.items.slice(0, 3).join(" · ")}</span></button>)}</div>
+        <div className="scenario-grid">{paths.map((path) => <button className={activePath === path.id ? "scenario active" : "scenario"} key={path.id} onClick={() => selectScenario(path.id)}><span className="scenario-number">{path.mark}</span><span className="scenario-title">{path.title}<b>↗</b></span><span className="scenario-desc">{path.desc}</span><span className="scenario-items">{path.items.slice(0, 3).join(" · ")}</span></button>)}</div>
       </section>
 
       <section className="section shell" id="catalogue">
@@ -83,19 +91,19 @@ export default function Home() {
         <div className="catalogue-layout">
           <aside className="filters" aria-label="项目筛选">
             <div className="filter-label">专家</div>
-            <button className={activeExpert === "all" ? "filter-option active" : "filter-option"} onClick={() => setActiveExpert("all")}>全部专家 <span>{items.length}</span></button>
-            {experts.map((expert) => <button key={expert.id} className={activeExpert === expert.id ? "filter-option active" : "filter-option"} onClick={() => setActiveExpert(expert.id)}><i style={{ background: expert.tone }} />{expert.name}<span>{items.filter((item) => item.expert === expert.id).length}</span></button>)}
+            <button className={activeExpert === "all" && !activePath ? "filter-option active" : "filter-option"} onClick={() => selectExpert("all")}>全部专家 <span>{items.length}</span></button>
+            {experts.map((expert) => <button key={expert.id} className={activeExpert === expert.id && !activePath ? "filter-option active" : "filter-option"} onClick={() => selectExpert(expert.id)}><i style={{ background: expert.tone }} />{expert.name}<span>{items.filter((item) => item.expert === expert.id).length}</span></button>)}
             <div className="filter-divider" /><div className="filter-label">优先级</div>
             {["先装", "先看", "按需", "参考", "进阶"].map((priority) => <button key={priority} className="filter-option compact" onClick={() => setQuery(priority)}>{priority}<span>→</span></button>)}
           </aside>
           <div className="catalogue-main">
             <div className="catalogue-tools"><label className="search-box"><span>⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索项目、用途或标签" aria-label="搜索项目、用途或标签" /></label><select value={sort} onChange={(event) => setSort(event.target.value)} aria-label="排序"><option value="default">默认排序</option><option value="priority">优先级优先</option><option value="name">名称排序</option></select></div>
-            <div className="tag-list">{allTags.slice(0, 22).map((tag) => <button key={tag} className={activeTag === tag ? "tag active" : "tag"} onClick={() => setActiveTag(tag)}>{tag}</button>)}</div>
-            <div className="catalogue-meta"><span>{selectedExpert ? selectedExpert.name : "全部专家"}</span><strong>{filteredItems.length} 个结果</strong></div>
+            <div className="tag-list">{allTags.slice(0, 22).map((tag) => <button key={tag} className={activeTag === tag && !activePath ? "tag active" : "tag"} onClick={() => selectTag(tag)}>{tag}</button>)}</div>
+            <div className="catalogue-meta"><span>{selectedPath?.title ?? (selectedExpert ? selectedExpert.name : "全部专家")}</span>{selectedPath && <button className="clear-path" onClick={() => setActivePath("")}>清除场景 ×</button>}<strong>{filteredItems.length} 个结果</strong></div>
 
             {selectedExpert ? <div className="expert-brief"><div className="expert-avatar" style={{ background: selectedExpert.tone }}>{selectedExpert.avatar}</div><div><p className="section-kicker">EXPERT NOTE</p><h3>{selectedExpert.name}</h3><p>{selectedExpert.summary}</p><small>{selectedExpert.position}</small></div><ol>{selectedExpert.installOrder.slice(0, 3).map((step) => <li key={step}>{step}</li>)}</ol></div> : <div className="expert-brief all-brief"><div className="expert-avatar all">ALL</div><div><p className="section-kicker">EDITOR&apos;S PICK</p><h3>全部专家合集</h3><p>跨专家检索，从场景出发选择技能包。卡片中已区分可直接安装的 Skill、值得研究的项目和需要额外环境的实验型工具。</p></div><span className="brief-aside">先场景<br />再标签<br />后安装</span></div>}
 
-            <div className="card-grid">{filteredItems.map((item) => <SkillCard key={item.id} item={item} onCopy={(text) => { copyText(text); flash("已复制到剪贴板"); }} onTag={(tag) => setActiveTag(tag)} />)}</div>
+            <div className="card-grid">{filteredItems.map((item) => <SkillCard key={item.id} item={item} onCopy={(text) => { copyText(text); flash("已复制到剪贴板"); }} onTag={selectTag} />)}</div>
             {filteredItems.length === 0 && <div className="empty-state">没有找到匹配的项目。换一个关键词或清空筛选。</div>}
           </div>
         </div>
