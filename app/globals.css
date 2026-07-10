@@ -2,7 +2,6 @@
 
 :root { --paper: #f4f1e9; --ink: #1f2421; --muted: #6c756e; --line: #d9d6cb; --green: #2f6f61; --coral: #b65f45; --blue: #4d63ae; --shell: min(1180px, calc(100% - 44px)); }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
 a { color: inherit; text-decoration: none; }
 button, input, select { font: inherit; }

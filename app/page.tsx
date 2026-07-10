@@ -45,7 +45,7 @@ export default function Home() {
     setActivePath(pathId);
     setActiveTag("全部");
     setQuery("");
-    document.getElementById("catalogue")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("catalogue")?.scrollIntoView({ behavior: "auto", block: "start" });
   };
   const selectExpert = (expertId: string) => { setActivePath(""); setActiveExpert(expertId); };
   const selectTag = (tag: string) => { setActivePath(""); setActiveTag(tag); };
