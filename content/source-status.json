@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-07-23T17:42:58.202Z",
+  "fetchedAt": "2026-07-24T17:47:18.720Z",
   "sources": [
     {
       "repository": "KKKKhazix/khazix-skills",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-07-19T20:14:59Z",
-      "updatedAt": "2026-07-23T17:19:35Z",
-      "stars": 17797
+      "pushedAt": "2026-07-24T16:46:53Z",
+      "updatedAt": "2026-07-24T17:42:07Z",
+      "stars": 17862
     },
     {
       "repository": "PnakotusLabs/ExpertWiki",
@@ -38,8 +38,8 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-07-22T18:20:11Z",
-      "updatedAt": "2026-07-23T17:35:49Z",
-      "stars": 163684
+      "updatedAt": "2026-07-24T17:46:22Z",
+      "stars": 163919
     },
     {
       "repository": "eli-labz/Godcoder",
@@ -70,7 +70,7 @@
       "status": "active",
       "defaultBranch": "master",
       "pushedAt": "2026-06-30T16:54:15Z",
-      "updatedAt": "2026-07-23T07:54:06Z",
+      "updatedAt": "2026-07-24T04:34:36Z",
       "stars": 360
     },
     {
@@ -86,8 +86,8 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-05-16T05:22:35Z",
-      "updatedAt": "2026-07-23T17:00:15Z",
-      "stars": 8414
+      "updatedAt": "2026-07-24T17:25:23Z",
+      "stars": 8422
     },
     {
       "repository": "kangarooking/agnes-free-model-skills",
@@ -102,16 +102,16 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-07-20T03:46:25Z",
-      "updatedAt": "2026-07-23T17:40:45Z",
-      "stars": 4505
+      "updatedAt": "2026-07-24T17:21:46Z",
+      "stars": 4609
     },
     {
       "repository": "kangarooking/kangarooking-skills",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-07-22T18:17:37Z",
-      "updatedAt": "2026-07-23T17:06:14Z",
-      "stars": 336
+      "updatedAt": "2026-07-24T15:16:10Z",
+      "stars": 346
     },
     {
       "repository": "kangarooking/mobileclaw",
@@ -126,8 +126,8 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-05-04T05:20:59Z",
-      "updatedAt": "2026-07-22T15:43:44Z",
-      "stars": 131
+      "updatedAt": "2026-07-24T02:56:39Z",
+      "stars": 132
     },
     {
       "repository": "kangarooking/x-skills",
@@ -141,25 +141,25 @@
       "repository": "obra/superpowers",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-07-22T22:46:53Z",
-      "updatedAt": "2026-07-23T17:38:53Z",
-      "stars": 259968
+      "pushedAt": "2026-07-24T00:29:46Z",
+      "updatedAt": "2026-07-24T17:46:20Z",
+      "stars": 260503
     },
     {
       "repository": "tanweai/pua",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-07-16T05:58:58Z",
-      "updatedAt": "2026-07-23T16:10:37Z",
-      "stars": 19002
+      "updatedAt": "2026-07-24T17:26:40Z",
+      "stars": 19015
     },
     {
       "repository": "thedotmack/claude-mem",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-07-23T09:15:54Z",
-      "updatedAt": "2026-07-23T17:32:08Z",
-      "stars": 88352
+      "pushedAt": "2026-07-23T22:47:38Z",
+      "updatedAt": "2026-07-24T17:43:46Z",
+      "stars": 88455
     }
   ]
 }
