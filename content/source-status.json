@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-08-29T19:22:57.182Z",
+  "fetchedAt": "2026-08-30T19:17:35.315Z",
   "sources": [
     {
       "repository": "KKKKhazix/khazix-skills",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-08-16T08:49:13Z",
-      "updatedAt": "2026-08-29T16:55:48Z",
-      "stars": 20248
+      "updatedAt": "2026-08-30T18:04:04Z",
+      "stars": 20275
     },
     {
       "repository": "PnakotusLabs/ExpertWiki",
@@ -38,24 +38,24 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-08-21T17:10:55Z",
-      "updatedAt": "2026-08-29T19:12:00Z",
-      "stars": 172444
+      "updatedAt": "2026-08-30T19:04:12Z",
+      "stars": 172625
     },
     {
       "repository": "eli-labz/Godcoder",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-07-04T20:02:41Z",
-      "updatedAt": "2026-08-27T09:38:49Z",
-      "stars": 194
+      "updatedAt": "2026-08-30T09:51:03Z",
+      "stars": 186
     },
     {
       "repository": "eli-labz/KAR",
       "status": "active",
       "defaultBranch": "master",
       "pushedAt": "2026-05-28T17:18:23Z",
-      "updatedAt": "2026-08-27T09:38:47Z",
-      "stars": 167
+      "updatedAt": "2026-08-30T09:51:04Z",
+      "stars": 162
     },
     {
       "repository": "eli-labz/Looping",
@@ -70,24 +70,24 @@
       "status": "active",
       "defaultBranch": "master",
       "pushedAt": "2026-06-30T16:54:15Z",
-      "updatedAt": "2026-08-27T09:38:41Z",
-      "stars": 286
+      "updatedAt": "2026-08-30T09:51:01Z",
+      "stars": 276
     },
     {
       "repository": "eli-labz/Third-Eye",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-06-13T06:29:56Z",
-      "updatedAt": "2026-08-28T12:21:54Z",
-      "stars": 730
+      "updatedAt": "2026-08-30T09:51:03Z",
+      "stars": 722
     },
     {
       "repository": "eze-is/web-access",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-08-19T01:36:35Z",
-      "updatedAt": "2026-08-29T17:39:03Z",
-      "stars": 8768
+      "updatedAt": "2026-08-30T17:21:51Z",
+      "stars": 8775
     },
     {
       "repository": "kangarooking/agnes-free-model-skills",
@@ -101,25 +101,25 @@
       "repository": "kangarooking/cangjie-skill",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-08-28T04:43:34Z",
-      "updatedAt": "2026-08-29T18:57:53Z",
-      "stars": 9172
+      "pushedAt": "2026-08-30T02:37:57Z",
+      "updatedAt": "2026-08-30T18:44:46Z",
+      "stars": 9219
     },
     {
       "repository": "kangarooking/kangarooking-skills",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-07-22T18:17:37Z",
-      "updatedAt": "2026-08-29T17:33:38Z",
-      "stars": 552
+      "pushedAt": "2026-08-30T15:52:20Z",
+      "updatedAt": "2026-08-30T15:52:22Z",
+      "stars": 553
     },
     {
       "repository": "kangarooking/mobileclaw",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-04-06T16:51:49Z",
-      "updatedAt": "2026-08-14T05:44:21Z",
-      "stars": 105
+      "updatedAt": "2026-08-30T15:23:14Z",
+      "stars": 106
     },
     {
       "repository": "kangarooking/system-prompt-skills",
@@ -142,24 +142,24 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-08-29T03:21:18Z",
-      "updatedAt": "2026-08-29T19:20:58Z",
-      "stars": 279336
+      "updatedAt": "2026-08-30T19:08:33Z",
+      "stars": 279637
     },
     {
       "repository": "tanweai/pua",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-08-29T07:57:53Z",
-      "updatedAt": "2026-08-29T17:17:52Z",
-      "stars": 19549
+      "updatedAt": "2026-08-30T16:10:43Z",
+      "stars": 19553
     },
     {
       "repository": "thedotmack/claude-mem",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-08-29T17:10:17Z",
-      "updatedAt": "2026-08-29T19:22:25Z",
-      "stars": 92573
+      "pushedAt": "2026-08-29T23:41:05Z",
+      "updatedAt": "2026-08-30T19:12:33Z",
+      "stars": 92650
     }
   ]
 }
