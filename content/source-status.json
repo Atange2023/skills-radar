@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-10-10T20:01:35.642Z",
+  "fetchedAt": "2026-10-11T20:12:24.086Z",
   "sources": [
     {
       "repository": "KKKKhazix/khazix-skills",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-10-01T13:15:32Z",
-      "updatedAt": "2026-10-10T15:58:47Z",
-      "stars": 21287
+      "updatedAt": "2026-10-11T17:14:09Z",
+      "stars": 21304
     },
     {
       "repository": "PnakotusLabs/ExpertWiki",
@@ -38,8 +38,8 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-10-09T18:45:52Z",
-      "updatedAt": "2026-10-10T20:01:18Z",
-      "stars": 180324
+      "updatedAt": "2026-10-11T19:35:38Z",
+      "stars": 180478
     },
     {
       "repository": "eli-labz/Godcoder",
@@ -85,9 +85,9 @@
       "repository": "eze-is/web-access",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-08-19T01:36:35Z",
-      "updatedAt": "2026-10-10T18:58:59Z",
-      "stars": 9104
+      "pushedAt": "2026-10-11T15:23:00Z",
+      "updatedAt": "2026-10-11T17:27:16Z",
+      "stars": 9110
     },
     {
       "repository": "kangarooking/agnes-free-model-skills",
@@ -102,8 +102,8 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-10-02T03:17:52Z",
-      "updatedAt": "2026-10-10T19:19:57Z",
-      "stars": 11146
+      "updatedAt": "2026-10-11T17:18:22Z",
+      "stars": 11181
     },
     {
       "repository": "kangarooking/kangarooking-skills",
@@ -142,24 +142,24 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-10-10T03:03:30Z",
-      "updatedAt": "2026-10-10T19:44:59Z",
-      "stars": 297186
+      "updatedAt": "2026-10-11T20:10:03Z",
+      "stars": 297603
     },
     {
       "repository": "tanweai/pua",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-09-09T10:28:14Z",
-      "updatedAt": "2026-10-10T17:21:39Z",
-      "stars": 19707
+      "updatedAt": "2026-10-11T19:46:53Z",
+      "stars": 19710
     },
     {
       "repository": "thedotmack/claude-mem",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-10-09T10:23:45Z",
-      "updatedAt": "2026-10-10T20:00:49Z",
-      "stars": 99183
+      "pushedAt": "2026-10-11T10:48:04Z",
+      "updatedAt": "2026-10-11T20:10:43Z",
+      "stars": 99677
     }
   ]
 }
