@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-11-27T00:32:31.571Z",
+  "fetchedAt": "2026-11-28T00:00:26.477Z",
   "sources": [
     {
       "repository": "KKKKhazix/khazix-skills",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-11-18T12:51:25Z",
-      "updatedAt": "2026-11-26T23:45:46Z",
-      "stars": 22573
+      "updatedAt": "2026-11-27T21:23:59Z",
+      "stars": 22627
     },
     {
       "repository": "PnakotusLabs/ExpertWiki",
@@ -38,8 +38,8 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-11-16T14:22:50Z",
-      "updatedAt": "2026-11-27T00:29:57Z",
-      "stars": 201043
+      "updatedAt": "2026-11-27T23:55:17Z",
+      "stars": 201507
     },
     {
       "repository": "eli-labz/Godcoder",
@@ -86,8 +86,8 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-10-14T11:30:02Z",
-      "updatedAt": "2026-11-26T14:38:02Z",
-      "stars": 9486
+      "updatedAt": "2026-11-27T15:20:56Z",
+      "stars": 9491
     },
     {
       "repository": "kangarooking/agnes-free-model-skills",
@@ -102,8 +102,8 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-10-02T03:17:52Z",
-      "updatedAt": "2026-11-26T21:37:10Z",
-      "stars": 13358
+      "updatedAt": "2026-11-27T23:14:27Z",
+      "stars": 13386
     },
     {
       "repository": "kangarooking/kangarooking-skills",
@@ -142,24 +142,24 @@
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-11-26T11:33:33Z",
-      "updatedAt": "2026-11-27T00:27:40Z",
-      "stars": 327483
+      "updatedAt": "2026-11-27T23:59:52Z",
+      "stars": 328291
     },
     {
       "repository": "tanweai/pua",
       "status": "active",
       "defaultBranch": "main",
       "pushedAt": "2026-09-09T10:28:14Z",
-      "updatedAt": "2026-11-26T17:18:33Z",
-      "stars": 19900
+      "updatedAt": "2026-11-27T23:26:12Z",
+      "stars": 19902
     },
     {
       "repository": "thedotmack/claude-mem",
       "status": "active",
       "defaultBranch": "main",
-      "pushedAt": "2026-11-26T21:26:54Z",
-      "updatedAt": "2026-11-27T00:32:21Z",
-      "stars": 119992
+      "pushedAt": "2026-11-27T21:21:53Z",
+      "updatedAt": "2026-11-27T23:57:02Z",
+      "stars": 120212
     }
   ]
 }
